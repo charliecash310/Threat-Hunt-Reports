@@ -16,7 +16,9 @@ Threat Hunt Event: Assistance
 A routine support request should have ended with a reset and reassurance. Instead, the so- called "help" left behind a trail of anomalies that don't add up. 
 What was framed as troubleshooting looked more like an audit of the system itself probing, cataloging, leaving subtle traces in its wake. Actions chained together in 
 suspicious sequence: first gaining a foothold, then expanding reach, then preparing to linger long after the session ended. And just when the activity should have raised questions, a neat explanation appeared — a story planted in plain sight, designed to justify the very behavior that demanded scrutiny. 
-This wasn't remote assistance. It was a misdirection. 
+This wasn't remote assistance. It was a misdirection.
+
+
 ---
 
 # 🎯 Objective
