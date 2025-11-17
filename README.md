@@ -4,10 +4,10 @@ Threat Hunt Event: Assistance
 
 # 🛡️ Threat Hunt Report – Assistance Incident (October 2025)
 
-## Analyst: Grisham DelRosario 
-## Environment: Log Analytics Workspace   
-## Host Investigated: `gab-intern-vm`  
-## Time Window: **October 1 – October 15, 2025**
+**Analyst:** Grisham DelRosario 
+**Environment:** Log Analytics Workspace   
+**Host Investigated:** `gab-intern-vm`  
+**Time Window:** **October 1 – October 15, 2025**
 
 ---
 
@@ -41,6 +41,8 @@ Using keyword analysis:
 
 And detection of processes originating in **Downloads**.
 
+
+
 ---
 
 # 🧠 Scenario Summary
@@ -63,6 +65,15 @@ The attacker impersonated support activity, leveraging:
 ## Flag 1 — ExecutionPolicy Bypass  
 Suspicious PowerShell launched with:
 
+### Suspicious PowerShell Execution
+```kql
+DeviceProcessEvents
+| where Timestamp > ago(7d)
+| where FileName in~ ("powershell.exe", "pwsh.exe")
+| where ProcessCommandLine has_any ("Invoke-WebRequest", "/S", "-ExecutionPolicy Bypass", "-NoProfile")
+| project Timestamp, DeviceName, AccountName, ProcessCommandLine
+| order by Timestamp desc
+```
 ```
 -ExecutionPolicy Bypass
 ```
