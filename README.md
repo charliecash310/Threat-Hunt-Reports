@@ -25,8 +25,6 @@ This wasn't remote assistance. It was a misdirection.
 
 Your mission this time is to reconstruct the timeline, connect the scattered remnants of this "support session", and decide what was legitimate, and what was staged. The evidence is here. The question is whether you'll see through the story or believe it.
 ****
----
-
 # 🏁 Starting Point
 
 Suspicious machine identified:
