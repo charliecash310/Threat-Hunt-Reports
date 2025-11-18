@@ -412,7 +412,10 @@ Exactly the kind of staging behavior attackers love:
 <img width="648" height="475" alt="image" src="https://github.com/user-attachments/assets/e1b1dd04-64f4-4e69-96e8-66d8803e1e82" />
 
 
+
 - The question asks for `task name`
+
+
 
 <img width="1492" height="134" alt="image" src="https://github.com/user-attachments/assets/cd510383-0c72-4356-a8ec-d4355db571b0" />
 
@@ -422,13 +425,14 @@ Exactly the kind of staging behavior attackers love:
 
 - We can see in the output of `schtasks.exe` that the task name `/TN` flag is part of the process command line. 
 
-- **We can see the value of the task name is `SupportToolUpdater`
+- We can see the value of the task name is `SupportToolUpdater`
 
 ---------------------------------------------------
 
 # Flag 14 - Autorun Fallback Persistence
 
 <img width="648" height="559" alt="image" src="https://github.com/user-attachments/assets/daa04793-cfa7-4559-94e6-a7f1cd1acc60" />
+
 
 - The table `RemoteAssistUpdater` returned nothing. 
 
@@ -441,7 +445,7 @@ Exactly the kind of staging behavior attackers love:
 
 - The actor **left a cover story behind**, and the hint gives it away:
 
-> **Hint:** The actor opened it for some reason.
+	> **Hint:** The actor opened it for some reason.
 
 - That means we’re hunting for a file the attacker **manually opened**, likely something meant to _explain_ or _justify_ what they were doing. 
 
