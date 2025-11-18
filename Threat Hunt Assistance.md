@@ -5,7 +5,7 @@
 # Table of Contents
 
 Detection and Analysis:
-- [Flag 1 - Initial Execution Detection]() 
+- [Flag 1 - Initial Execution Detection](# Flag 1 - Initial Execution Detection) 
 - [Flag 2 - Defense Disabling]()
 - [Flag 3 - Quick Data Probe]()
 - [Flag 4 - Host Context Recon]()
