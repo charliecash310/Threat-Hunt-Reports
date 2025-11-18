@@ -125,7 +125,7 @@ DeviceFileEvents
 # **Detection and Analysis**
 
 # Flag 1 - Initial Execution Detection  
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 - Throughout the threat hunt, the table `DeviceProcessEvents` was very key in order to examine the logs.
@@ -163,7 +163,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 2 - Defense Disabling 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="663" height="519" alt="image" src="https://github.com/user-attachments/assets/59d134ae-2232-4d6a-8bd9-ba32fd18d0e3" />
 
@@ -217,7 +217,7 @@ DeviceFileEvents
 ---------------------------------------------------
 
 # Flag 3 - Quick Data Probe 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="605" height="519" alt="image" src="https://github.com/user-attachments/assets/87ce3e70-eaf9-4e99-9c58-e50ab8ae0637" />
 
@@ -257,7 +257,7 @@ DeviceFileEvents
 ---------------------------------------------------
 
 # Flag 4 - Host Context Recon 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="660" height="510" alt="image" src="https://github.com/user-attachments/assets/bfaec963-a973-44e1-b905-5ee9395f2399" />
 
@@ -288,7 +288,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 5 - Storage Surface Mapping 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="677" height="503" alt="image" src="https://github.com/user-attachments/assets/823b8907-4acd-4922-a58e-9010bccace05" />
 
@@ -323,7 +323,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 6 - Connectivity & Name Resolution Check 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="659" height="502" alt="image" src="https://github.com/user-attachments/assets/e6c62aa4-f755-4c5b-95cd-0683ea774d05" />
 
@@ -351,7 +351,7 @@ DeviceNetworkEvents
 ---------------------------------------------------
 
 # Flag 7 - Interactive Session Discovery 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="661" height="467" alt="image" src="https://github.com/user-attachments/assets/ac36c23e-8e4a-4ece-a14f-3938832b6061" />
 
@@ -399,7 +399,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 8 - Runtime Application Inventory 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="663" height="546" alt="image" src="https://github.com/user-attachments/assets/89f36f9a-1f78-407f-bc8a-6b1dfc05fcc3" />
 
@@ -434,7 +434,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 9 - Privilege Surface Check 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="661" height="481" alt="image" src="https://github.com/user-attachments/assets/3a2938db-b2da-4917-8231-c763cb7314ae" />
 
@@ -474,7 +474,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 10 - Proof-of-Access & Egress Validation 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="661" height="543" alt="image" src="https://github.com/user-attachments/assets/07da97ad-943d-4fa6-a665-c2722bf59a47" />
 
@@ -510,7 +510,7 @@ DeviceNetworkEvents
 ---------------------------------------------------
 
 # Flag 11 - Bundling / Staging Artifacts 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="650" height="515" alt="image" src="https://github.com/user-attachments/assets/d121712d-5a56-4949-bab5-de21e3561f48" />
 
@@ -548,7 +548,7 @@ DeviceFileEvents
 ---------------------------------------------------
 
 # Flag 12 - Outbound Transfer Attempt 
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 <img width="649" height="519" alt="image" src="https://github.com/user-attachments/assets/bff3f5f3-a630-4ab1-8d8c-496b3e2b82da" />
@@ -578,7 +578,7 @@ DeviceNetworkEvents
 ---------------------------------------------------
 
 # Flag 13 - Scheduled Re-Execution Persistence
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="648" height="475" alt="image" src="https://github.com/user-attachments/assets/e1b1dd04-64f4-4e69-96e8-66d8803e1e82" />
 
@@ -612,7 +612,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 14 - Autorun Fallback Persistence
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="648" height="559" alt="image" src="https://github.com/user-attachments/assets/daa04793-cfa7-4559-94e6-a7f1cd1acc60" />
 
@@ -623,7 +623,7 @@ DeviceProcessEvents
 ---------------------------------------------------
 
 # Flag 15 - Planted Narrative / Cover Artifact
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="659" height="523" alt="image" src="https://github.com/user-attachments/assets/2a834215-ef61-46ec-afbd-1c895984cd43" />
 
@@ -657,7 +657,7 @@ DeviceFileEvents
 ---------------------------------------------------
 
 # Logical Flow & Analyst Reasoning
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 <img width="660" height="939" alt="image" src="https://github.com/user-attachments/assets/a7c631cc-c3df-4090-af5e-ccfa777325cb" />
 
@@ -666,7 +666,7 @@ DeviceFileEvents
 ---------------------------------------------------
 
 # Final Notes / Findings
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 This incident simulated a realistic multi-stage intrusion:
 
@@ -687,7 +687,7 @@ And every step was traceable using **Log Analytics KQL**, primarily through:
 ---------------------------------------------------
 
 # Flags → MITRE ATT&CK Mapping Table
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 | Time Stamp - UTC             | **Flag #** | **Flag Title**                       | **Observed Activity**                                                                                                                                                        | **MITRE ATT&CK Technique**                                 | **Technique ID**      |
 | ---------------------------- | ---------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------- |
@@ -711,7 +711,7 @@ And every step was traceable using **Log Analytics KQL**, primarily through:
 ---------------------------------------------------
 
 # Summary of ATT&CK Categories Used
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 | Category                          | Techniques Used            |
 | --------------------------------- | -------------------------- |
@@ -729,7 +729,7 @@ And every step was traceable using **Log Analytics KQL**, primarily through:
 ---------------------------------------------------
 
 # Lessons Learned
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 Mitigations for This Threat Hunt
 
@@ -737,7 +737,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
 
 ---
 ## 🔒 **1. Strengthen PowerShell Logging & Restrictions**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** Nearly all malicious activity in this scenario involved PowerShell:
 
@@ -768,7 +768,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
 - Deploy **AppLocker** or **Windows Defender Application Control (WDAC)** rules to block PowerShell.exe for standard users
 ---
 ## 📁 **2. Restrict Execution from User Download Folders**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** Initial execution occurred from:  
 `C:\Users\<intern>\Downloads\SupportTool.ps1`
@@ -784,7 +784,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
     - FileCreated events appear in Downloads with *.ps1 / *.exe / *.lnk
 ---
 ## 🔍 **3. Harden Scheduled Task Abuse**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** Persistence was created via:  
 `Schtasks.exe /Create /SC ONLOGON /TN SupportToolUpdater ...`
@@ -800,7 +800,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
 - Alert on task names with benign-sounding names (`*Updater`, `*Support*`, etc.)
 ---
 ## 🚫 **4. Prevent Registry Run Key Persistence**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** A fallback autorun mechanism was created (Flag 14).
 
@@ -817,7 +817,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
 - Lock down autorun entries via GPO
 ---
 ## 🌐 **5. Improve Network Egress Controls**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** The attacker performed:
 
@@ -846,7 +846,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
     - Requests to unknown external IPs
 ---
 ## 🛡 **6. Enable/Improve Endpoint Security Controls**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** Defender was tampered with (Flag 2).
 
@@ -863,7 +863,7 @@ Each mitigation is mapped to the techniques observed in the hunt, prioritized by
     - Unusual Defender artifacts like `DefenderTamperArtifact.txt/.lnk`
 ---
 ## 🧩 **7. Block Living-off-the-Land Binaries (LOLBins)**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 The attacker used LOLBins such as:
 
@@ -893,7 +893,7 @@ The attacker used LOLBins such as:
     - `whoami /priv`
 ---
 ## 🔐 **8. Least Privilege Enforcement**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** The user was allowed to do:
 
@@ -911,7 +911,7 @@ The attacker used LOLBins such as:
 - Apply LAPS to rotate local admin creds
 ---
 ## 📦 **9. User Education & Phishing Awareness**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** The initial malicious "support tool" masqueraded as a legitimate file.
 
@@ -924,7 +924,7 @@ The attacker used LOLBins such as:
 - Highlight risks of “helpdesk tools” sent externally
 ---
 ## 🧵 **10. Improve SOC Detection Logic**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 Create detection rules for:
 ### Indicators of Execution
@@ -950,7 +950,7 @@ Create detection rules for:
 - Repeated DNS lookups to untrusted domains
 ---
 ## 🗂 **11. File System Hardening**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 **Why:** The attacker staged artifacts in:  
 `C:\Users\Public\ReconArtifacts.zip`
@@ -970,7 +970,7 @@ Create detection rules for:
     - Downloads
 ---
 # ⭐ **Top 5 Quick-Win Mitigations to Implement Immediately**
-[table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 1. **Enable PowerShell logging + restrict script execution**
     
