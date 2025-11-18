@@ -623,6 +623,9 @@ DeviceProcessEvents
 
 - This ties the script to an interactive session (likely the `g4bri3Intern` profile) and demonstrates user-level execution (MITRE ATT&CK T1204 – User Execution).
 
+<img width="1231" height="126" alt="image" src="https://github.com/user-attachments/assets/656f6176-20fc-40d4-a8a9-4a9e7762b5b7" />
+
+
 ```
 //---------------FLAG 15-----------------------
 DeviceFileEvents
@@ -666,6 +669,25 @@ And every step was traceable using **Log Analytics KQL**, primarily through:
 ---------------------------------------------------
 
 # Flags → MITRE ATT&CK Mapping Table
+
+| Time Stamp - UTC             | **Flag #** | **Flag Title**                       | **Observed Activity**                                                                                                                                                        | **MITRE ATT&CK Technique**                                 | **Technique ID**      |
+| ---------------------------- | ---------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------- |
+| 2025-10-09T12:22:27.6588913Z | **1**      | Initial Execution Detection          | PowerShell execution using         <br><br>`-ExecutionPolicy`                                                                                                                | Command & Scripting Interpreter: PowerShell                | **T1059.001**         |
+| 2025-10-09T12:34:59.1260624Z | **2**      | Defense Disabling Indicator          | Creation of malicious file <br><br>`DefenderTamperArtifact.lnk`                                                                                                              | Defense Evasion: Masquerading / Indirect Execution via LNK | **T1036 / T1204.002** |
+| 2025-10-09T12:50:40.0325062Z | **3**      | Quick Data Probe                     | Clipboard access using  <br>`"powershell.exe" -NoProfile -Sta -Command "try { Get-Clipboard \| Out-Null } catch { }"`<br><br>                                                | Input Capture: Clipboard Data                              | **T1115**             |
+| 2025-10-09T12:51:44.3272076Z | **4**      | Host Context Recon                   | Session enumeration (`qwinsta.exe`)<br><br>`InitiatingProcessCommandLine`<br>`"cmd.exe" /c query session `<br><br>`Time Generated`<br>`2025-10-09T12:51:44.3272076Z`<br><br> | Account Discovery / System Owner-User Discovery            | **T1087 / T1033**     |
+| 2025-10-09T12:51:18.3848072Z | **5**      | Storage Surface Mapping              | Disk/volume enumeration via <br><br>`"cmd.exe" /c wmic logicaldisk get name,freespace,size`<br><br>                                                                          | System Information Discovery                               | **T1082**             |
+| 2025-10-09T12:55:05.7658713Z | **6**      | Connectivity & Name Resolution Check | Outbound DNS / connectivity testing via PowerShell <br><br>`RuntimeBroker.exe`<br><br>                                                                                       | Application Layer Protocol / DNS                           | **T1071 / T1071.004** |
+| 2025-10-09T12:51:44.3081129Z | **7**      | Interactive Session Discovery        | Interactive session state checked (`query session`)<br><br>`InitiatingProcessUniqueId`<br><br>`2533274790397065`<br><br>                                                     | System Information Discovery / Remote Services Discovery   | **T1082 / T1035**     |
+| 2025-10-09T12:51:57.6866149Z | **8**      | Runtime Application Inventory        | Process listing using <br><br>`tasklist.exe`<br><br>                                                                                                                         | Process Discovery                                          | **T1057**             |
+| 2025-10-09T12:52:14.3135459Z | **9**      | Privilege Surface Check              | Privilege/user enumeration <br>(`whoami /priv`, `/groups`)<br><br>`TimeGenerated`<br>`2025-10-09T12:52:14.3135459Z`<br><br><br>                                              | Permission Group Discovery                                 | **T1069**             |
+| 2025-10-09T12:55:05.7658713Z | **10**     | Proof-of-Access & Egress Validation  | Outbound contact to <br><br>`msftconnecttest.com`                                                                                                                            | Exfiltration Test / Application Layer Protocol             | **T1041 / T1071**     |
+| 2025-10-09T12:58:17.4364257Z | **11**     | Bundling / Staging Artifacts         | Staging of `ReconArtifacts.zip` in Public directory folderpath<br><br>`C:\Users\Public\ReconArtifacts.zip`<br><br>                                                           | Archive Collected Data                                     | **T1560**             |
+| 2025-10-09T13:00:40.045127Z  | **12**     | Outbound Transfer Attempt            | Outbound HTTP traffic to <br><br>`100.29.147.161`<br><br>                                                                                                                    | Exfiltration Over Web Services                             | **T1567.002**         |
+| 2025-10-09T13:01:29.7815532Z | **13**     | Scheduled Re-Execution Persistence   | Scheduled Task: <br><br>`SupportToolUpdater`                                                                                                                                 | Scheduled Task/Job: Scheduled Task                         | **T1053.005**         |
+|-------------N/A--------------| **14**     | Autorun Fallback Persistence         | Registry persistence value <br><br>`RemoteAssistUpdater`<br><br>                                                                                                             | Registry Run Keys / Startup Folder                         | **T1547.001**         |
+| 2025-10-09T13:02:41.5698148Z | **15**     | Planted Narrative / Cover Artifact   | Fake support file: <br><br>`SupportChat_log.lnk`                                                                                                                             | Masquerading (Fake File / Cover Story)                     | **T1036**             |
+
 
 ---------------------------------------------------
 
