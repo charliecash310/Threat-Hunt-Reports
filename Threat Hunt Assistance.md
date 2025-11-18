@@ -340,7 +340,7 @@ This is pointing directly at:
 
 # Flag 9 - Privilege Surface Check
 
-
+<img width="661" height="481" alt="image" src="https://github.com/user-attachments/assets/3a2938db-b2da-4917-8231-c763cb7314ae" />
 
 **Objective**
 > Detect attempts to understand privileges available to the current actor.
@@ -361,17 +361,15 @@ That’s `whoami` territory.
 `TimeGenerated`
 `2025-10-09T12:52:14.3135459Z`
 
+<img width="1494" height="121" alt="image" src="https://github.com/user-attachments/assets/39465d67-1977-4d65-84be-9bab3e458317" />
 
-
-
-
-
+<img width="1189" height="229" alt="image" src="https://github.com/user-attachments/assets/5af37ea0-29ff-48df-99a1-973891d8b14b" />
 
 ---------------------------------------------------
 
 # Flag 10 - Proof-of-Access & Egress Validation
 
-
+<img width="661" height="543" alt="image" src="https://github.com/user-attachments/assets/07da97ad-943d-4fa6-a665-c2722bf59a47" />
 
 Outbound Contact = Anything the host reaches OUT to
 
@@ -385,7 +383,9 @@ In other words:
 Defender logs this as `DeviceNetworkEvents.`
 	Decided to check the `RemoteUrl` column for outbound connections that were being tested with powershell.exe results below were the only existing domains to an unusual destination.
 
+<img width="1651" height="138" alt="image" src="https://github.com/user-attachments/assets/fcd73d08-c31c-47df-bd31-454177670959" />
 
+<img width="1586" height="117" alt="image" src="https://github.com/user-attachments/assets/ed079127-1942-4d24-a3f4-1d00ee82b28a" />
 
 
 
@@ -393,6 +393,7 @@ Defender logs this as `DeviceNetworkEvents.`
 
 # Flag 11 - Bundling / Staging Artifacts
 
+<img width="650" height="515" alt="image" src="https://github.com/user-attachments/assets/d121712d-5a56-4949-bab5-de21e3561f48" />
 
 
 Dropped at: 
@@ -411,15 +412,16 @@ Exactly the kind of staging behavior attackers love:
 - `No user desktop pop-ups
 - `Easy to exfiltrate quietly
 
+<img width="768" height="123" alt="image" src="https://github.com/user-attachments/assets/281b5337-bd69-44c2-8b6c-5b42be4d9c67" />
 
-
-
+<img width="1343" height="121" alt="image" src="https://github.com/user-attachments/assets/cfb6ee2f-f8f1-4309-b523-37b0043bb94f" />
 
 ---------------------------------------------------
 
 # Flag 12 - Outbound Transfer Attempt
 
 
+<img width="649" height="519" alt="image" src="https://github.com/user-attachments/assets/bff3f5f3-a630-4ab1-8d8c-496b3e2b82da" />
 
 
 
@@ -427,19 +429,23 @@ Recall the same query from Flag 10. The IP of the last unusual outbound connecti
 
 The `RemoteIP` column showed the IP, `100.29.147.161`, of the outbound connection
 
+<img width="1220" height="137" alt="image" src="https://github.com/user-attachments/assets/48d39b74-91cc-4325-a9bc-84d3860c8bbe" />
 
-
+<img width="1564" height="118" alt="image" src="https://github.com/user-attachments/assets/898d9787-38a5-44c4-a660-2f68cf4c3172" />
 
 
 ---------------------------------------------------
 
 # Flag 13 - Scheduled Re-Execution Persistence
 
+<img width="648" height="475" alt="image" src="https://github.com/user-attachments/assets/e1b1dd04-64f4-4e69-96e8-66d8803e1e82" />
 
 
 The question asks for `task name`
 
+<img width="1492" height="134" alt="image" src="https://github.com/user-attachments/assets/cd510383-0c72-4356-a8ec-d4355db571b0" />
 
+<img width="2143" height="482" alt="image" src="https://github.com/user-attachments/assets/02ca3943-1b5b-4338-8a72-e336423fe802" />
 
 
 
@@ -451,7 +457,7 @@ We can see the value of the task name is `SupportToolUpdater`
 
 # Flag 14 - Autorun Fallback Persistence
 
-
+<img width="648" height="559" alt="image" src="https://github.com/user-attachments/assets/daa04793-cfa7-4559-94e6-a7f1cd1acc60" />
 
 The table `RemoteAssistUpdater` returned nothing. 
 
@@ -460,7 +466,7 @@ The table `RemoteAssistUpdater` returned nothing.
 
 # Flag 15 - Planted Narrative / Cover Artifact
 
-
+<img width="659" height="523" alt="image" src="https://github.com/user-attachments/assets/2a834215-ef61-46ec-afbd-1c895984cd43" />
 
 The actor **left a cover story behind**, and the hint gives it away:
 
@@ -471,3 +477,11 @@ That means we’re hunting for a file the attacker **manually opened**, likely s
 The attacker delivered `SupportTool.ps1` to the victim’s Downloads folder and then executed it via the Windows shell, causing Explorer to create `SupportTool.lnk` in the Recent items directory.
 
 This ties the script to an interactive session (likely the `g4bri3Intern` profile) and demonstrates user-level execution (MITRE ATT&CK T1204 – User Execution).
+
+---------------------------------------------------
+
+# Logical Flow & Analyst Reasoning
+
+<img width="660" height="939" alt="image" src="https://github.com/user-attachments/assets/a7c631cc-c3df-4090-af5e-ccfa777325cb" />
+
+<img width="650" height="889" alt="image" src="https://github.com/user-attachments/assets/dd20c29b-8db8-47ab-b673-1ed667b0c615" />
