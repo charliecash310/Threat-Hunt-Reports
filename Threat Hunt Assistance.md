@@ -74,12 +74,11 @@ Lessons Learned:
 
 <img width="1450" height="575" alt="image" src="https://github.com/user-attachments/assets/f0c6c24a-97fd-4884-8613-8c23a803a964" />
 
-- In order to identify the most suspicious machine based on the given conditions I decided to set a variable called 'keywords' with "desk", "help", "support", and "tool" in order to set up the query. 
+- In order to identify the most suspicious machine based on the given conditions I decided to set a variable called `'keywords' with "desk", "help", "support", and "tool"` in order to set up the query. 
 
-- First table I checked to start this hunt was 'DeviceFileEvents.' 
+- First table I checked to start this hunt was `DeviceFileEvents.` 
 
-- The keyword "support" also allowed me to find this suspicious filename, " Support_701.txt " that was unusual as I was going through the logs but it allowed me to find the suspicious machine. I kept focus as it was mentioned at starting point several machines were found to share the same types of files - similar executables, naming patterns, and other traits - 
-
+- The keyword "support" also allowed me to find this suspicious filename, `Support_701.txt` that was unusual as I was going through the logs but it allowed me to find the suspicious machine. I kept focus as it was mentioned at starting point several machines were found to share the same types of files - similar executables, naming patterns, and other traits - 
 
 <img width="704" height="217" alt="image" src="https://github.com/user-attachments/assets/ff72c95f-5ce7-43fa-b020-ff28861dc1ae" />
 
