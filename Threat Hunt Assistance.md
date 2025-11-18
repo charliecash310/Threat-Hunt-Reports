@@ -133,13 +133,9 @@ Lessons Learned:
 
 - I kept noticing this command scrolling through the logs and noticed the string when querying for  `Artifact` and `Out-File -FilePath 'C:\Users\Public\DefenderTamperArtifact.txt'`
 
-- The query used in Flag 1 to understand the CLI parameter `-ExecutionPolicy`, was key into understanding the timeline of events that showed another powershell command outputting a file called 
+- The query used in Flag 1 to understand the CLI parameter `-ExecutionPolicy`, was key into understanding the timeline of events that showed another powershell command outputting a file called `DefenderTamperArtifact.txt`
 
-`DefenderTamperArtifact.txt`
-
-- As I kept querying for the term artifact and I kept on encountering the file name 
-
-`ReconArtifacts.zip.`
+- As I kept querying for the term artifact and I kept on encountering the file name `ReconArtifacts.zip.`
 
 - It was the closest thing I can find but it was not the official tampered artifact.
 
@@ -207,9 +203,7 @@ The Answer:
 <img width="660" height="510" alt="image" src="https://github.com/user-attachments/assets/bfaec963-a973-44e1-b905-5ee9395f2399" />
 
 
-- While going through the logs, and reading this flag I recall seeing an executable called ' qwinsta.exe ' I had to look up this program and it is a command on windows that can:
-
-`Display information about sessions on a Remote Desktop Session Host server`
+- While going through the logs, and reading this flag I recall seeing an executable called ' qwinsta.exe ' I had to look up this program and it is a command on windows that can: `Display information about sessions on a Remote Desktop Session Host server`
 
 - This made sense in terms of gathering host and user context information.
 
@@ -218,8 +212,6 @@ The Answer:
 <img width="1111" height="121" alt="image" src="https://github.com/user-attachments/assets/fa7b7d31-3378-4812-836c-ae1b89161b7b" />
 
 <img width="1855" height="84" alt="image" src="https://github.com/user-attachments/assets/4a85f06f-890f-4671-a5b7-0925eff8dcb9" />
-
-
 
 
 ---------------------------------------------------
@@ -240,7 +232,6 @@ The Answer:
 	`Time Generated @ 2025-10-09T12:51:18.3848072Z`
 	`"cmd.exe" /c wmic logicaldisk get name,freespace,size`
 
-
 <img width="1168" height="107" alt="image" src="https://github.com/user-attachments/assets/1da00a3b-5db3-42bd-95e9-e45a6a2416a9" />
 
 <img width="1190" height="715" alt="image" src="https://github.com/user-attachments/assets/0d1966d1-68e4-4a74-9437-f87e71ca951b" />
@@ -253,18 +244,15 @@ The Answer:
 
 <img width="659" height="502" alt="image" src="https://github.com/user-attachments/assets/e6c62aa4-f755-4c5b-95cd-0683ea774d05" />
 
-What was key to this question was network related events. 
-Especially when it comes to DNS and outbound connections.
+- What was key to this question was network related events. Especially when it comes to DNS and outbound connections.
 
-I decided to check the `InitiatingProcessParentFileName` column in the `DeviceNetworkEvents` table and try to narrow down unusual PowerShell activity.
+- I decided to check the `InitiatingProcessParentFileName` column in the `DeviceNetworkEvents` table and try to narrow down unusual PowerShell activity.
 
-I made sure to stay focused on October 9th 2025 during the time of `12:50-12:55 PM` as other events from `DeviceProcessEvents` and `DeviceFileEvents` were very important in relation to `SupportToolScript.ps1`. `Powershell` executables have been very prevalent throughout the hunt. 
+- I made sure to stay focused on October 9th 2025 during the time of `12:50-12:55 PM` as other events from `DeviceProcessEvents` and `DeviceFileEvents` were very important in relation to `SupportToolScript.ps1`. `Powershell` executables have been very prevalent throughout the hunt. 
 
 <img width="1993" height="122" alt="image" src="https://github.com/user-attachments/assets/e832c5a8-2319-488c-8701-fa37526d84ab" />
 
 <img width="2114" height="679" alt="image" src="https://github.com/user-attachments/assets/5abdd300-1878-4300-a79c-894ab1ab0bd8" />
-
-
 
 
 ---------------------------------------------------
@@ -276,15 +264,15 @@ I made sure to stay focused on October 9th 2025 during the time of `12:50-12:55 
 
 `Keywords: Session, Initiate Process, Unique`
 
-Had to get a little help with this one from another user without having to give away the answer and eventually I had a lightbulb moment.
+- Had to get a little help with this one from another user without having to give away the answer and eventually I had a lightbulb moment.
 
-It was actually really simple. When I read the question "What is the unique ID of the initiating process?" I kept focusing for the column `InitiatingProcessID`
+- It was actually really simple. When I read the question "What is the unique ID of the initiating process?" I kept focusing for the column `InitiatingProcessID`
 
-I was so stumped that I feel the process identification task number was staring at me.  I had to pivot and got the hint from a user to project `InitiatingProcessUniqueId`
+- I was so stumped that I feel the process identification task number was staring at me.  I had to pivot and got the hint from a user to project `InitiatingProcessUniqueId`
 
-I should have considered the term `unique` in order to find the number of `InitiatingProcessUniqueId`
+- I should have considered the term `unique` in order to find the number of `InitiatingProcessUniqueId`
 
-	2533274790397065
+	`2533274790397065`
 
 
 <img width="1723" height="95" alt="image" src="https://github.com/user-attachments/assets/19b3f1f5-c130-4b66-a178-7ff16cc32dc1" />
