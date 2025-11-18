@@ -129,46 +129,40 @@ Lessons Learned:
 
 ----------------------------------------------------------------------
 
-Further on, I decided to pivot back into `DeviceProcessEvents` table and look back into more power shell activity.
+- Further on, I decided to pivot back into `DeviceProcessEvents` table and look back into more power shell activity.
 
-I kept noticing this command scrolling through the logs and noticed the string when querying for  `Artifact` and `Out-File -FilePath 'C:\Users\Public\DefenderTamperArtifact.txt'`
+- I kept noticing this command scrolling through the logs and noticed the string when querying for  `Artifact` and `Out-File -FilePath 'C:\Users\Public\DefenderTamperArtifact.txt'`
 
-The query used in Flag 1 to understand the CLI parameter `-ExecutionPolicy`, was key into understanding the timeline of events
-
-that showed another powershell command outputting a file called 
+- The query used in Flag 1 to understand the CLI parameter `-ExecutionPolicy`, was key into understanding the timeline of events that showed another powershell command outputting a file called 
 
 `DefenderTamperArtifact.txt`
 
-As I kept querying for the term artifact and I kept on encountering the file name 
+- As I kept querying for the term artifact and I kept on encountering the file name 
 
 `ReconArtifacts.zip.`
 
-It was the closest thing I can find but it was not the official tampered artifact.
+- It was the closest thing I can find but it was not the official tampered artifact.
 
-Still needed to find something related to either this or the `DefenderTamperArtifact.txt` file.
-
-Somehow I knew these were related to Defense Disabling but could not make the linkage as to how it was all connected.
+- Still needed to find something related to either this or the `DefenderTamperArtifact.txt` file. Somehow I knew these were related to Defense Disabling but could not make the linkage as to how it was all connected.
 
 <img width="2144" height="514" alt="image" src="https://github.com/user-attachments/assets/c910c494-6961-4dcc-9f2e-c6ce4407400b" />
 
 <img width="1448" height="219" alt="image" src="https://github.com/user-attachments/assets/708a3d33-4ba1-4454-a265-006bfc370ff6" />
 
-I decided to check `DeviceFileEvents` table and query for `Artifact` in the `FileName` column.
+- I decided to check `DeviceFileEvents` table and query for `Artifact` in the `FileName` column.
 
 
 <img width="1252" height="124" alt="image" src="https://github.com/user-attachments/assets/ec4632fa-5264-428d-b380-b6be28e62c1e" />
 
 
 
-For the query, I kept using `Artifact` and used this information to see if there was another file name related to the term.
+- For the query, I kept using `Artifact` and used this information to see if there was another file name related to the term.
 
-I found `ReconArtifacts.zip` and then saw that there was a 
+- I found `ReconArtifacts.zip` and then saw that there was a `DefenderTamperArtifact.lnk` file. 
 
-`DefenderTamperArtifact.lnk` file. 
+- The timestamp matches with process creation from the `DeviceProcessEvents` table
 
-The timestamp matches with process creation from the `DeviceProcessEvents` table
-
-The  `.lnk`  file extension is a shortcut of the filename. Upon researching `.LNK` files, they are often the trigger for malicious scripts and  can be used for malicious purposes.
+- The  `.lnk`  file extension is a shortcut of the filename. Upon researching `.LNK` files, they are often the trigger for malicious scripts and  can be used for malicious purposes.
 
 
 <img width="1863" height="771" alt="image" src="https://github.com/user-attachments/assets/3a8b87d6-a9f5-4f7b-8a7b-5b2e6369bbf9" />
@@ -183,22 +177,22 @@ The  `.lnk`  file extension is a shortcut of the filename. Upon researching `.
 <img width="605" height="519" alt="image" src="https://github.com/user-attachments/assets/87ce3e70-eaf9-4e99-9c58-e50ab8ae0637" />
 
 
-For this flag I imagined the command value had something to do with copy and paste actions as it is a common short-lived action.
+- For this flag I imagined the command value had something to do with copy and paste actions as it is a common short-lived action.
 
-The other part to this was the term `query`
+- The other part to this was the term `query`
 
-I decided to check the `InitiateProcessCommandLine` column and find syntax and flags that looked like it was written as a query.
+- I decided to check the `InitiateProcessCommandLine` column and find syntax and flags that looked like it was written as a query.
 
-Upon looking I kept my focus on the timeline of the script and tried to match up the time .
+- Upon looking I kept my focus on the timeline of the script and tried to match up the time .
 
-The `InitiatingProcessCommandLine` showed this command below when querying for `'clip'`
+- The `InitiatingProcessCommandLine` showed this command below when querying for `'clip'`
 
 The Answer:
 
 `"powershell.exe" -NoProfile -Sta -Command "try { Get-Clipboard | Out-Null }    catch { }"` 
 
 
-This specific activity related to `powershell` has the syntax for a query such as 
+- This specific activity related to `powershell` has the syntax for a query such as 
 
 `"try { Get-Clipboard | Out-Null } catch { }"`
 
@@ -213,13 +207,13 @@ This specific activity related to `powershell` has the syntax for a query such a
 <img width="660" height="510" alt="image" src="https://github.com/user-attachments/assets/bfaec963-a973-44e1-b905-5ee9395f2399" />
 
 
-While going through the logs, and reading this flag I recall seeing an executable called ' qwinsta.exe ' I had to look up this program and it is a command on windows that can:
+- While going through the logs, and reading this flag I recall seeing an executable called ' qwinsta.exe ' I had to look up this program and it is a command on windows that can:
 
-	'Display information about sessions on a Remote Desktop Session Host server'
+`Display information about sessions on a Remote Desktop Session Host server`
 
-This made sense in terms of gathering host and user context information.
+- This made sense in terms of gathering host and user context information.
 
-Working within the timestamp of `2025-10-09T12:51:44.3425653Z` we can see that this was the last recon attempt for the query session for the attacker to enumerate.
+- Working within the timestamp of `2025-10-09T12:51:44.3425653Z` we can see that this was the last recon attempt for the query session for the attacker to enumerate.
 
 <img width="1111" height="121" alt="image" src="https://github.com/user-attachments/assets/fa7b7d31-3378-4812-836c-ae1b89161b7b" />
 
@@ -235,16 +229,16 @@ Working within the timestamp of `2025-10-09T12:51:44.3425653Z` we can see that t
 <img width="677" height="503" alt="image" src="https://github.com/user-attachments/assets/823b8907-4acd-4922-a58e-9010bccace05" />
 
 
-After looking at the 'qwinsta.exe' process that was created in the logs.
+- After looking at the `qwinsta.exe` process that was created in the logs.I noticed the command prompt executable that showed logical disk that comes after the `qwinsta.exe` executable.
 
-I noticed the command prompt executable that showed logical disk that comes after the 'qwinsta.exe' executable.
+- This made sense in terms of data as to where it lives and the data that can be discovered such as 'storage'. 
 
-This made sense in terms of data as to where it lives and the data that can be discovered such as 'storage'. Decided to search for 'WMIC.exe' command and found out that the 'logical disk'
+- Decided to search for 'WMIC.exe' command and found out that the 'logical disk' is `used to query Windows for information about a computer's local drives`. 
 
-We can see the `TimeGenerated` column is still within 12:50:00 PM-12:51:00 PM.
+- We can see the `TimeGenerated` column is still within 12:50:00 PM-12:51:00 PM.
 
-	Time Generated @ 2025-10-09T12:51:18.3848072Z
-	"cmd.exe" /c wmic logicaldisk get name,freespace,size
+	`Time Generated @ 2025-10-09T12:51:18.3848072Z`
+	`"cmd.exe" /c wmic logicaldisk get name,freespace,size`
 
 
 <img width="1168" height="107" alt="image" src="https://github.com/user-attachments/assets/1da00a3b-5db3-42bd-95e9-e45a6a2416a9" />
