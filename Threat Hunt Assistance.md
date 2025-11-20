@@ -62,7 +62,7 @@ Lessons Learned:
 
 <img width="655" height="151" alt="image" src="https://github.com/user-attachments/assets/a763f5e7-4426-4ee3-b02f-beaa98be81a5" />
 
-
+---------------------------------------------------
 ### KQL Query Used
 
 ```
@@ -94,10 +94,10 @@ DeviceFileEvents
 
 - First table I checked to start this hunt was `DeviceFileEvents.` 
 
-- The keyword `support` also allowed me to find this suspicious filename, `Support_701.txt` that was unusual as I was going through the logs but it allowed me to find the suspicious machine. I kept focus as it was mentioned at starting point several machines were found to share the same types of files - similar executables, naming patterns, and other traits - 
-
-<img width="704" height="217" alt="image" src="https://github.com/user-attachments/assets/ff72c95f-5ce7-43fa-b020-ff28861dc1ae" />
-
+- The keyword `support` also allowed me to find this suspicious filename, `Support_701.txt` that was unusual as I was going through the logs but it allowed me to find the suspicious machine. I kept focus as it was mentioned at starting point several machines were found to share the same types of files - similar executables, naming patterns, and other traits -
+- 
+---------------------------------------------------
+### KQL Query Used
 ```
 //---------------------------------------------------------
 let start = datetime(2025-10-01T00:00:00Z);
@@ -142,8 +142,8 @@ DeviceFileEvents
 
 - The earliest anomalous execution of powershell being executed was `2025-10-06T06:00:48.7549551Z`
 
-<img width="1196" height="127" alt="image" src="https://github.com/user-attachments/assets/ecbd8370-1de8-4876-9cad-4ba3b1dd5cb5" />
-
+---------------------------------------------------
+### KQL Query Used
 ```
 //---------------FLAG 1-----------------------
 DeviceProcessEvents
