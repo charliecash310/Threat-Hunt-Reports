@@ -63,7 +63,7 @@ Lessons Learned:
 <img width="655" height="151" alt="image" src="https://github.com/user-attachments/assets/a763f5e7-4426-4ee3-b02f-beaa98be81a5" />
 
 
-###KQL Query Used
+### KQL Query Used
 
 ```
 //---------------------------------------------------------
