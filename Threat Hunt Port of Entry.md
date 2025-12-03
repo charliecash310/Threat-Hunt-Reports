@@ -95,7 +95,8 @@ Based on the results from the Flag 1, the information was logs was very noticeab
 
 **Screenshot:** 
 
-![[Pasted image 20251122164509.png]]
+<img width="1682" height="228" alt="Pasted image 20251122164509" src="https://github.com/user-attachments/assets/f4718bf5-b688-4327-acc0-b863317a23c4" />
+
 
 
 ---
