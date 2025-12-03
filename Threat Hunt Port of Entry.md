@@ -70,7 +70,8 @@ Upon looking the logs and the `ActionType` column there was a particular activit
 
 # FLAG 2
 
-![[Pasted image 20251122164202.png]]
+<img width="631" height="559" alt="Pasted image 20251122164202" src="https://github.com/user-attachments/assets/403ebd7b-4699-4164-9996-09b37aba95f6" />
+
 
 KQL Query Used
 
