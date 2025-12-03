@@ -39,7 +39,8 @@ The following report outlines the **attack chain**, **MITRE ATT&CK mapping**, **
 ----
 # FLAG 1
 
-![[Pasted image 20251122162016.png]]
+<img width="814" height="836" alt="image" src="https://github.com/user-attachments/assets/cad80f6b-c072-4564-bcab-fdbae51a5f7c" />
+
 
 
 KQL Query Used
@@ -62,7 +63,7 @@ Upon looking the logs and the `ActionType` column there was a particular activit
 
 **Screenshot:** 
 
-![[Pasted image 20251122162436.png]]
+<img width="1682" height="228" alt="Pasted image 20251122162436" src="https://github.com/user-attachments/assets/065c9892-dc60-4ca4-95de-cc23b2791a6e" />
 
 
 -----
