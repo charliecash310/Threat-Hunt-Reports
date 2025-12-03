@@ -34,7 +34,7 @@ The following report outlines the **attack chain**, **MITRE ATT&CK mapping**, **
 
 ---------
 
-![[Pasted image 20251122160849.png]]
+<img width="786" height="729" alt="image" src="https://github.com/user-attachments/assets/f8a54c56-3420-444c-aaa3-d95575837f10" />
 
 ----
 # FLAG 1
