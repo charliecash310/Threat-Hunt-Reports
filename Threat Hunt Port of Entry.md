@@ -34,12 +34,14 @@ The following report outlines the **attack chain**, **MITRE ATT&CK mapping**, **
 
 ---------
 
-<img width="786" height="729" alt="image" src="https://github.com/user-attachments/assets/f8a54c56-3420-444c-aaa3-d95575837f10" />
+<img width="634" height="588" alt="Pasted image 20251122160849" src="https://github.com/user-attachments/assets/5f9e214a-5ef7-4dde-ae14-f4857f3c3ed5" />
+
 
 ----
 # FLAG 1
 
-<img width="814" height="836" alt="image" src="https://github.com/user-attachments/assets/cad80f6b-c072-4564-bcab-fdbae51a5f7c" />
+<img width="652" height="673" alt="Pasted image 20251122162016" src="https://github.com/user-attachments/assets/3e3d93de-3d2e-4bb4-961d-373ef4fb9617" />
+
 
 
 
@@ -103,7 +105,8 @@ Based on the results from the Flag 1, the information was logs was very noticeab
 
 # FLAG 3
 
-![[Pasted image 20251122165602.png]]
+<img width="633" height="587" alt="Pasted image 20251122165602" src="https://github.com/user-attachments/assets/741688ab-989c-480d-b308-3c058031b946" />
+
 
 KQL Query Used
 
@@ -128,14 +131,17 @@ the process `arp.exe` was executed with the argument `-a`, indicating that the a
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122165501.png]]
+<img width="1847" height="329" alt="Pasted image 20251122165501" src="https://github.com/user-attachments/assets/12b821e4-488e-4839-9455-b752e2b77502" />
 
-![[Pasted image 20251122170132.png]]
+
+<img width="1946" height="759" alt="Pasted image 20251122170132" src="https://github.com/user-attachments/assets/634314d0-aada-4077-91c6-f7d90a4c08f0" />
+
 
 -----
 # FLAG 4
 
-![[Pasted image 20251122181530.png]]
+<img width="633" height="589" alt="Pasted image 20251122181530" src="https://github.com/user-attachments/assets/c650adf0-038f-48ab-9bfb-21ae44c13f5a" />
+
 
 KQL Query Used
 
@@ -162,12 +168,14 @@ The directory `C:\ProgramData\WindowsCache` was identified as the primary malwar
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122181806.png]]
+<img width="1816" height="419" alt="Pasted image 20251122181806" src="https://github.com/user-attachments/assets/d61ad9e5-7830-4901-bbb7-80fbf0b60b3d" />
+
 
 
 # FLAG 5
 
-![[Pasted image 20251122221300.png]]
+<img width="630" height="639" alt="Pasted image 20251122221300" src="https://github.com/user-attachments/assets/abf0a2b2-9415-4f07-8257-8ac5ccb04dd5" />
+
 
 KQL Query Used
 
@@ -199,16 +207,19 @@ During the attack, the adversary modified the Windows Defender exclusion policy 
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122221214.png]]
+<img width="344" height="132" alt="Pasted image 20251122221214" src="https://github.com/user-attachments/assets/c8b02797-28df-47d0-83ef-e17c50f23be4" />
+
 
 Results without the `| count`
 
-![[Pasted image 20251122223719.png]]
+<img width="1130" height="205" alt="Pasted image 20251122223719" src="https://github.com/user-attachments/assets/ba8bc93d-85ed-459f-945d-1a51095cee61" />
+
 
 ----
 # FLAG 6
 
-![[Pasted image 20251122224317.png]]
+<img width="624" height="663" alt="Pasted image 20251122224317" src="https://github.com/user-attachments/assets/b5d4205f-d201-4a9b-b903-8b30f0aa20e3" />
+
 
 
 KQL Query Used
@@ -233,14 +244,13 @@ The attacker added a Windows Defender path exclusion for the directory `C:\Users
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122225102.png]]
+<img width="1987" height="363" alt="Pasted image 20251122225102" src="https://github.com/user-attachments/assets/ba96bf0c-73f0-4138-af57-93b53ff5ccf3" />
+
 
 ----
 # FLAG 7
 
-
-
-![[Pasted image 20251122232354.png]]
+<img width="630" height="413" alt="Pasted image 20251122232354" src="https://github.com/user-attachments/assets/e73c4e8c-e636-42e3-bdf1-2fb8f847eab8" />
 
 
 KQL Query Used
@@ -266,14 +276,16 @@ The attacker abused the built-in Windows tool `certutil.exe` to download malicio
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122232306.png]]
+<img width="2494" height="988" alt="Pasted image 20251122232306" src="https://github.com/user-attachments/assets/941ea07d-9522-47d3-bc63-db956fa3388b" />
+
 
 
 ----
 
 # FLAG 8
 
-![[Pasted image 20251122232634.png]]
+<img width="625" height="489" alt="Pasted image 20251122232634" src="https://github.com/user-attachments/assets/153d06fe-2077-4040-9bdc-a68f69bda009" />
+
 
 **Query 8 - Persistence - Scheduled Task Name**
 
@@ -296,14 +308,16 @@ The attacker created a scheduled task named “Windows Update Check” to establ
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251122233041.png]]
+<img width="2315" height="328" alt="Pasted image 20251122233041" src="https://github.com/user-attachments/assets/02cbc952-a519-465a-880a-e054347323b1" />
+
 
 
 ----
 
 # FLAG 9
 
-![[Pasted image 20251122235110.png]]
+<img width="629" height="430" alt="Pasted image 20251122235110" src="https://github.com/user-attachments/assets/f1cf393a-80fa-4323-9472-55d9dd317bc6" />
+
 
 **Query 9 - Persistence - Scheduled Task Target**
 
@@ -329,7 +343,8 @@ The scheduled task was configured to execute a malicious binary located at `C:\P
 
 # FLAG 10
 
-![[Pasted image 20251123000138.png]]
+<img width="628" height="540" alt="Pasted image 20251123000138" src="https://github.com/user-attachments/assets/38fdd22f-2358-46c8-a022-0f5d94378690" />
+
 
 **Query 10 - Command & Control - C2 Server Address**
 
@@ -351,13 +366,15 @@ The command-and-control (C2) server contacted by the malicious payload was `78.1
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123113508.png]]
+<img width="1391" height="754" alt="Pasted image 20251123113508" src="https://github.com/user-attachments/assets/655040cf-fa89-49de-9f4c-2b0f5b163577" />
+
 
 ----
 
 # FLAG 11
 
-![[Pasted image 20251123000203.png]]
+<img width="620" height="412" alt="Pasted image 20251123000203" src="https://github.com/user-attachments/assets/f3285db3-71f1-42f8-a7cd-3ba4067b2747" />
+
 
 **Query 11 - Command & Control - C2 Communication Port**
 
@@ -377,14 +394,16 @@ The attacker used TCP port 443 for command-and-control communication. This port 
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123113508.png]]
+<img width="1391" height="754" alt="Pasted image 20251123113508" src="https://github.com/user-attachments/assets/529279f2-d785-4d20-bc7b-32a5c3d2ac54" />
+
 
 
 ----
 
 # FLAG 12
 
-![[Pasted image 20251123124433.png]]
+<img width="628" height="515" alt="Pasted image 20251123124433" src="https://github.com/user-attachments/assets/c63abab6-1226-4af9-9a8b-d828e05be48d" />
+
 
 **Query 12 - Credential Access = Credential Theft Tool**
 
@@ -405,13 +424,15 @@ The credential dumping tool used by the attacker was a renamed executable identi
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123124959.png]]
+<img width="2532" height="1165" alt="Pasted image 20251123124959" src="https://github.com/user-attachments/assets/dedd1c2c-26a7-4272-a293-349ce86115b9" />
+
 
 ----
 
 # FLAG 13
 
-![[Pasted image 20251123125226.png]]
+<img width="629" height="535" alt="Pasted image 20251123125226" src="https://github.com/user-attachments/assets/86e3e557-f1b9-4c0b-a756-43c3e0dceb48" />
+
 
 
 **Query 13 - Credential Access - Memory Extraction Module**
@@ -433,14 +454,16 @@ The attacker executed the Mimikatz module `sekurlsa::logonpasswords` using a ren
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123125343.png]]
+<img width="628" height="396" alt="Pasted image 20251123125343" src="https://github.com/user-attachments/assets/eb8a52f4-3128-4477-b236-fe323bc3a0f4" />
+
 
 
 ----
 
 # FLAG 14
 
-![[Pasted image 20251123125811.png]]
+<img width="626" height="493" alt="Pasted image 20251123125811" src="https://github.com/user-attachments/assets/8ffa0a67-9bf6-423b-b591-b0622f4fab7a" />
+
 
 
 **Query 14 - Collection - Data Staging Archive**
@@ -464,13 +487,15 @@ The attacker created a ZIP archive named `export-data.zip` to package stolen fil
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123125952.png]]
+<img width="2097" height="475" alt="Pasted image 20251123125952" src="https://github.com/user-attachments/assets/b3ac23f0-4ecd-4c64-944f-96625c2b5863" />
+
 
 
 ---
 # FLAG 15
 
-![[Pasted image 20251123130649.png]]
+<img width="624" height="552" alt="Pasted image 20251123130649" src="https://github.com/user-attachments/assets/96d69454-c67d-4df4-9974-1c68bc920abc" />
+
 
 
 **Query 15 - Exfiltration - Exfiltration Channel**
@@ -493,14 +518,16 @@ The attacker used Discord as the exfiltration channel, leveraging its file uploa
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123130817.png]]
+<img width="1642" height="738" alt="Pasted image 20251123130817" src="https://github.com/user-attachments/assets/a7f48e28-f22e-455f-a9d9-cdf99dabb7c3" />
+
 
 
 ----
 
 # FLAG 16
 
-![[Pasted image 20251123133232.png]]
+<img width="632" height="498" alt="Pasted image 20251123133232" src="https://github.com/user-attachments/assets/6c781625-728b-4511-9929-aeb49f315081" />
+
 
 
 **Query 16 - Anti-Forensics - Log Tampering**
@@ -524,7 +551,8 @@ The attacker cleared the Windows Security event log using `wevtutil.exe`, indica
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123133620.png]]
+<img width="2093" height="185" alt="Pasted image 20251123133620" src="https://github.com/user-attachments/assets/21a926c8-2a97-43f3-9c6e-ce467b488da3" />
+
 
 
 ----
@@ -532,7 +560,8 @@ The attacker cleared the Windows Security event log using `wevtutil.exe`, indica
 # FLAG 17
 
 
-![[Pasted image 20251123134403.png]]
+<img width="616" height="487" alt="Pasted image 20251123134403" src="https://github.com/user-attachments/assets/04ee5545-43fa-4fa6-81c6-0c5daf2044cf" />
+
 
 **Query 17 - IMPACT - Persistence Account**
 
@@ -556,7 +585,8 @@ The attacker created a backdoor user account named `support` using the `net user
 **Screenshot:** ☐ Attached
 
 
-![[Pasted image 20251123134643.png]]
+<img width="1666" height="175" alt="Pasted image 20251123134643" src="https://github.com/user-attachments/assets/e62ec28d-aeac-4414-8802-b4e92a3d43d1" />
+
 
 
 
@@ -564,7 +594,8 @@ The attacker created a backdoor user account named `support` using the `net user
 
 # FLAG 18
 
-![[Pasted image 20251123140318.png]]
+<img width="616" height="548" alt="Pasted image 20251123140318" src="https://github.com/user-attachments/assets/4bc1092e-9404-40eb-a554-123f3770de4f" />
+
 
 
 **Query 18 - EXECUTION - Malicious Script**
@@ -588,14 +619,16 @@ The attacker utilized a malicious PowerShell script named `wupdate.ps1` to autom
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123140543.png]]
+<img width="2293" height="562" alt="Pasted image 20251123140543" src="https://github.com/user-attachments/assets/b10f37f3-b544-4699-8c32-eedadad9c72e" />
+
 
 
 ----
 
 # FLAG 19
 
-![[Pasted image 20251123141926.png]]
+<img width="614" height="545" alt="Pasted image 20251123141926" src="https://github.com/user-attachments/assets/882c159c-d344-44ae-85d8-d4e68d58f57b" />
+
 
 **Query 19 - LATERAL MOVEMENT - Secondary Target**
 
@@ -616,13 +649,15 @@ DeviceNetworkEvents
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123142240.png]]
+<img width="2195" height="672" alt="Pasted image 20251123142240" src="https://github.com/user-attachments/assets/fabf1736-6a65-44aa-bdf6-31573e628385" />
+
 
 ----
 
 # FLAG 20
 
-![[Pasted image 20251123141949.png]]
+<img width="610" height="557" alt="Pasted image 20251123141949" src="https://github.com/user-attachments/assets/f3ff08cf-79a1-402c-b2ed-328492803461" />
+
 
 **Query 20 - LATERAL MOVEMENT - Remote Access Tool**
 
@@ -643,7 +678,8 @@ The attacker used `mstsc.exe`, the native Windows Remote Desktop client, to init
 
 **Screenshot:** ☐ Attached
 
-![[Pasted image 20251123142248.png]]
+<img width="2195" height="672" alt="Pasted image 20251123142248" src="https://github.com/user-attachments/assets/eca64480-a36c-4ec6-93af-c05fca727fcf" />
+
 
 
 -----
