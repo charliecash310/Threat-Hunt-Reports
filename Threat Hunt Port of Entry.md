@@ -60,7 +60,7 @@ DeviceLogonEvents
 
 **Results:** ________________
 
-Upon looking the logs and the `ActionType` column there was a particular activity that showed `LogonSuccess` and the protocol for this logon was `Negotiate` this particular protocol is normal to RDP process where `a client and server exchange information to determine the most secure security method for their connection.` This stood out for the IP address, `88.97.178.12`. 
+` Upon looking the logs and the `ActionType` column there was a particular activity that showed `LogonSuccess` and the protocol for this logon was `Negotiate` this particular protocol is normal to RDP process where `a client and server exchange information to determine the most secure security method for their connection.` This stood out for the IP address, `88.97.178.12`. ` 
 
 
 **Screenshot:** 
@@ -90,9 +90,9 @@ DeviceLogonEvents
 
 **Results:**
 
-```
+`
 Based on the results from the Flag 1, the information was logs was very noticeable 
-```
+`
 
 
 **Screenshot:** 
@@ -123,9 +123,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 the process `arp.exe` was executed with the argument `-a`, indicating that the attacker enumerated the ARP cache to identify local network neighbors. This action reveals IP-to-MAC address mappings for recently communicated hosts, enabling an adversary to map accessible systems for potential lateral movement. The execution of `arp.exe -a` immediately followed other reconnaissance commands (`ipconfig.exe /all`, `hostname.exe`, `whoami.exe`), consistent with **MITRE ATT&CK T1016: System Network Configuration Discovery**. This behavior strongly suggests post-compromise network reconnaissance.
-```
+`
 
 
 
@@ -160,9 +160,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The directory `C:\ProgramData\WindowsCache` was identified as the primary malware staging location because it does not normally exist within a standard Windows installation, was created during the intrusion window, and was subsequently modified using `attrib` to hide its presence. Multiple malicious binaries—including the scheduled task payload—were written to this directory, confirming it as the central location where the attacker stored and executed their tools.
-```
+`
 
 
 
@@ -200,9 +200,9 @@ DeviceRegistryEvents
 
 **Results:**
 
-```
+`
 During the attack, the adversary modified the Windows Defender exclusion policy by adding three new file extension exclusions under the `Windows Defender\Exclusions\Extensions` registry key. These modifications effectively blinded Defender from scanning malicious files using those extensions. This technique aligns with MITRE ATT&CK T1562.001 (Impair Defenses: Disable or Modify Tools). The intentional addition of three extensions indicates that the attacker relied on specific file types for payload staging, malware execution, and evasion, reflecting a structured and deliberate defense-evasion strategy.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -237,9 +237,9 @@ DeviceRegistryEvents
 
 **Results:**
 
-```
+`
 The attacker added a Windows Defender path exclusion for the directory `C:\Users\KENJI~1.SAT\AppData\Local\Temp`, effectively preventing antivirus scanning within the user’s Temp folder. This allowed the adversary to download, store, and execute malicious files without detection. The use of the short-path 8.3 naming format (`KENJI~1`) is intentional and indicates an effort to avoid detection rules and ensure compatibility with LOLBins and scripted payloads. This technique aligns with MITRE ATT&CK T1562.001 (Impair Defenses: Disable or Modify Tools), and confirms active defense evasion during the intrusion.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -269,9 +269,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker abused the built-in Windows tool `certutil.exe` to download malicious payloads to the system. Because `certutil.exe` is a trusted, signed Microsoft binary with native network and file-writing capabilities, it is frequently leveraged in Living-Off-The-Land (LOLBIN) attacks to evade antivirus detection. Its presence in the attack timeline with URL parameters strongly indicates deliberate defense evasion and ingress tool transfer. This behavior maps to MITRE ATT&CK T1105 (Ingress Tool Transfer) and T1218 (Signed Binary Proxy Execution).
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -301,9 +301,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker created a scheduled task named “Windows Update Check” to establish persistence on the compromised host. This name was deliberately chosen to mimic legitimate Windows maintenance tasks, reducing the likelihood of detection. The task was created using `schtasks.exe /create` and configured to execute the malicious payload stored in `C:\ProgramData\WindowsCache\svchost.exe` upon a defined schedule. This technique aligns with MITRE ATT&CK T1053.005 (Scheduled Task) and demonstrates the attacker’s intent to maintain long-term access through stealthy and reliable post-compromise persistence.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -332,9 +332,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The scheduled task was configured to execute a malicious binary located at `C:\ProgramData\WindowsCache\svchost.exe`. Although named after a legitimate Windows system process, this file resides outside any legitimate system directory, indicating deliberate masquerading. The attacker placed the payload within a hidden staging folder (`WindowsCache`) under ProgramData and used a scheduled task to ensure consistent persistence across reboots. This behavior aligns with MITRE ATT&CK T1036 (Masquerading) and T1053.005 (Scheduled Task), highlighting a stealthy, persistent access mechanism within the compromised environment.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -359,9 +359,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The command-and-control (C2) server contacted by the malicious payload was `78.141.196.6`. This external IP address was identified in `DeviceProcessEvents` as the destination for outbound HTTPS traffic initiated by the malicious `svchost.exe` executable immediately after it was staged and executed. Communication occurred over TCP port 443, indicating an attempt to blend malicious C2 traffic with legitimate encrypted web traffic. This behavior aligns with MITRE ATT&CK T1071 (Application Layer Protocol) and provides a clear indicator of the attacker’s remote control infrastructure.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -387,9 +387,9 @@ DeviceNetworkEvents
 
 **Results:**
 
-```
+`
 The attacker used TCP port 443 for command-and-control communication. This port is commonly associated with HTTPS traffic, allowing the adversary to blend their C2 traffic with legitimate encrypted web traffic. By routing malware communications through port 443, the attacker evaded basic firewall rules, avoided network inspection, and leveraged encryption to conceal commands and exfiltrated data. This activity aligns with MITRE ATT&CK T1071.001 (Web Protocols) and demonstrates the attacker’s intent to remain stealthy during remote control operations.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -417,9 +417,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The credential dumping tool used by the attacker was a renamed executable identified as `mm.exe`. This binary appeared in the malicious staging directory shortly before LSASS memory access events and was executed with elevated privileges. The filename’s minimal form strongly indicates an attempt to evade signature-based detection of known tools such as Mimikatz. Its execution correlates directly with subsequent logon password extraction activity, confirming its role as the credential theft mechanism. This aligns with MITRE ATT&CK T1003 (OS Credential Dumping) and demonstrates deliberate obfuscation and defense evasion by the attacker.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -447,9 +447,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker executed the Mimikatz module `sekurlsa::logonpasswords` using a renamed credential dumping binary (`mm.exe`). This module accesses LSASS memory to extract logon credentials including NTLM hashes, cleartext passwords (when available), Kerberos tickets, and token information. The command-line usage (`privilege::debug sekurlsa::logonpasswords exit`) confirms that the attacker escalated privileges to obtain SeDebugPrivilege and executed the module with precision. This behavior corresponds to MITRE ATT&CK T1003.001 (LSASS Memory) and represents the point at which the adversary gained the ability to perform lateral movement and escalate access across the environment.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -480,9 +480,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker created a ZIP archive named `export-data.zip` to package stolen files prior to exfiltration. The archive appeared within the staging directory used by the attacker and was generated shortly before outbound data transfers to the C2 server. Using ZIP compression is a common technique to combine multiple files, reduce size, and mask malicious content. This activity aligns with MITRE ATT&CK T1560 (Archive Collected Data) and represents the transition between the Collection and Exfiltration phases of the intrusion.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -511,9 +511,9 @@ DeviceNetworkEvents
 
 **Results:**
 
-```
+`
 The attacker used Discord as the exfiltration channel, leveraging its file upload capabilities and globally distributed content delivery network (CDN). DeviceNetworkEvents showed outbound HTTPS connections to Discord domains immediately after the creation of `export-data.zip`, confirming the file was uploaded to Discord’s infrastructure. Using Discord provides attackers with encrypted transmission, benign-looking traffic, and persistent cloud storage, making it an effective and stealthy exfiltration method. This behavior aligns with MITRE ATT&CK T1567.002 (Exfiltration to Cloud Storage).
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -544,9 +544,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker cleared the Windows Security event log using `wevtutil.exe`, indicating a deliberate attempt to remove forensic evidence and impede incident investigation. The Security log contains critical entries such as authentication events, privilege escalation, and process creation, making it the primary log defenders rely on to reconstruct an intrusion timeline. Clearing this log first demonstrates the attacker’s sophistication and understanding of Windows logging mechanisms. This behavior aligns with MITRE ATT&CK T1070.001 (Clear Windows Event Logs) and signifies intentional anti-forensic activity near the end of the attack sequence.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -577,9 +577,9 @@ DeviceProcessEvents
 
 **Results:**
 
-```
+`
 The attacker created a backdoor user account named `support` using the `net user /add` command, followed by adding the account to the local Administrators group. This provided the adversary with an alternative method of privileged access that persists independently of malware or scheduled task mechanisms. The use of a benign-sounding name such as “support” helps conceal the account within legitimate system user lists. This activity aligns with MITRE ATT&CK T1136.001 (Create Account: Local Account) and T1098 (Account Manipulation), and represents a deliberate attempt to maintain long-term access even if other components of the intrusion are remediated.
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -612,9 +612,9 @@ DeviceFileEvents
 
 **Results:**
 
-```
+`
 The attacker utilized a malicious PowerShell script named `wupdate.ps1` to automate key stages of the intrusion. The filename imitates legitimate Windows Update activity, enabling the script to blend into common administrative workflows. Analysis of DeviceFileEvents and DeviceProcessEvents indicates that this script was created and executed shortly after initial access, serving as an automation mechanism for actions such as malware staging, defender evasion, payload execution, and preparation for data exfiltration. This behavior aligns with MITRE ATT&CK T1059.001 (PowerShell) and T1036 (Masquerading).
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -642,9 +642,9 @@ DeviceNetworkEvents
 
 **Results:**
 
-```
+`
 **The attacker attempted lateral movement to the internal system at `10.1.0.188`. DeviceNetworkEvents showed outbound network connections from the compromised host (`azuki-sl`) to this IP shortly after credential dumping activity, indicating the attacker was using stolen credentials or authentication material to expand their access. This behavior aligns with MITRE ATT&CK T1021 (Remote Services) and T1550 (Use of Alternate Authentication Material), and marks the transition from a single-host compromise to an attempted multi-host intrusion within the network.**
-```
+`
 
 
 **Screenshot:** ☐ Attached
@@ -671,9 +671,9 @@ DeviceNetworkEvents
 
 **Results:**
 
-```
+`
 The attacker used `mstsc.exe`, the native Windows Remote Desktop client, to initiate lateral movement toward the internal system at `10.1.0.188`. This technique leverages a legitimate administrative tool to blend malicious activity with normal network behavior, making detection more difficult. The use of RDP following credential dumping indicates the attacker attempted to use stolen authentication material to expand access across the environment. This activity aligns with MITRE ATT&CK T1021.001 (Remote Services: Remote Desktop Protocol) and demonstrates hands-on-keyboard lateral movement by the adversary.
-```
+`
 
 
 **Screenshot:** ☐ Attached
