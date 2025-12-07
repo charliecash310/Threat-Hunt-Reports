@@ -58,7 +58,7 @@ DeviceLogonEvents
 | project Timestamp, DeviceName, ActionType, LogonType, AccountDomain, AccountName, Protocol, RemoteDeviceName, RemoteIP, RemotePort
 ```
 
-**Results:** ________________
+**Results:**
 
 ` Upon looking the logs and the `ActionType` column there was a particular activity that showed `LogonSuccess` and the protocol for this logon was `Negotiate` this particular protocol is normal to RDP process where `a client and server exchange information to determine the most secure security method for their connection.` This stood out for the IP address, `88.97.178.12`. ` 
 
