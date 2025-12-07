@@ -692,28 +692,28 @@ Each flag mapped to the exact ATT&CK technique used by the adversary.
 
 ## **MITRE ATT&CK Framework Mapping Table**
 
-| Time | **Flag #** | **Stage**                   | **Action Identified**                           | **MITRE Technique**                      | **ID**      |
-| ---- | ---------- | --------------------------- | ----------------------------------------------- | ---------------------------------------- | ----------- |
-|      | **1**      | Initial Access              | RDP login from external IP                      | Valid Accounts: Remote Services          | `T1078.002` |
-|      | **2**      | Initial Access              | Compromised user account (`kenji.sato`)         | Valid Accounts                           | `T1078`     |
-|      | **3**      | Discovery                   | ARP sweep (`arp.exe -a`)                        | System Network Configuration Discovery   | `T1016`     |
-|      | **4**      | Defense Evasion             | Hidden malware staging directory                | Hide Artifacts                           | `T1564`     |
-|      | **5**      | Defense Evasion             | File extension exclusions added to Defender     | Impair Defenses: Disable or Modify Tools | `T1562.001` |
-|      | **6**      | Defense Evasion             | Folder (Temp) exclusion created                 | Indicator Blocking / Impair Defenses     | `T1562.006` |
-|      | **7**      | Execution / Defense Evasion | `certutil.exe` used to download malware         | Signed Binary Proxy Execution (LOLBIN)   | `T1218`     |
-|      | **8**      | Persistence                 | Scheduled Task created                          | Scheduled Task                           | `T1053.005` |
-|      | **9**      | Persistence                 | Malicious payload executed via Scheduled Task   | Scheduled Task / Execution               | `T1053.005` |
-|      | **10**     | C2                          | External C2 server (`78.141.196.6`)             | Application Layer Protocol (HTTPS)       | `T1071.001` |
-|      | **11**     | C2                          | C2 communication over port 443                  | Encrypted Channel / Web Protocol         | `T1071.001` |
-|      | **12**     | Credential Access           | Credential dumping tool (`mm.exe`)              | OS Credential Dumping                    | `T1003`     |
-|      | **13**     | Credential Access           | LSASS extraction via `sekurlsa::logonpasswords` | Credential Dumping: LSASS                | `T1003.001` |
-|      | **14**     | Collection                  | Stolen data archived (`export-data.zip`)        | Archive Collected Data                   | `T1560`     |
-|      | **15**     | Exfiltration                | Data uploaded via Discord CDN                   | Exfiltration to Cloud Storage            | `T1567.002` |
-|      | **16**     | Anti-Forensics              | Security Log cleared                            | Clear Windows Event Logs                 | `T1070.001` |
-|      | **17**     | Impact / Persistence        | Backdoor account (`support`) created            | Create Account (Local)                   | `T1136.001` |
-|      | **18**     | Execution                   | Malicious PowerShell script (`wupdate.ps1`)     | PowerShell                               | `T1059.001` |
-|      | **19**     | Lateral Movement            | Lateral movement target (`10.1.0.188`)          | Remote Services                          | `T1021`     |
-|      | **20**     | Lateral Movement            | `mstsc.exe` used for RDP pivot                  | Remote Services: RDP                     | `T1021.001` |
+| Time                             | **Flag #** | **Stage**                   | **Action Identified**                                                                          | **MITRE Technique**                      | **ID**      |
+| -------------------------------- | ---------- | --------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
+| 2025-11-19T18:36:21.0262386Z     | **1**      | Initial Access              | RDP login from external IP `88.97.178.12`                                                      | Valid Accounts: Remote Services          | `T1078.002` |
+| 2025-11-19T18:36:21.0262386Z     | **2**      | Initial Access              | Compromised user account (`kenji.sato`)                                                        | Valid Accounts                           | `T1078`     |
+| 2025-11-19T19:04:01.773778Z      | **3**      | Discovery                   | ARP sweep (`arp.exe -a`)                                                                       | System Network Configuration Discovery   | `T1016`     |
+| 2025-11-19T19:05:33.7665036Z     | **4**      | Defense Evasion             | Hidden malware staging directory <br><br>`C:\ProgramData\WindowsCache`                         | Hide Artifacts                           | `T1564`     |
+| 2025-11-19T18:49:27.7301011Z     | **5**      | Defense Evasion             | File extension exclusions added to Defender <br><br>`3` excluded                               | Impair Defenses: Disable or Modify Tools | `T1562.001` |
+| 2025-11-19T18:49:27.6830204Z     | **6**      | Defense Evasion             | Folder (Temp) exclusion created<br><br>`C:\Users\KENJI~1.SAT\AppData\Local\Temp`               | Indicator Blocking / Impair Defenses     | `T1562.006` |
+| 2025-11-19T19:06:58.5778439Z     | **7**      | Execution / Defense Evasion | `certutil.exe` used to download malware                                                        | Signed Binary Proxy Execution (LOLBIN)   | `T1218`     |
+| 2025-11-19T19:07:46.9796512Z     | **8**      | Persistence                 | Scheduled Task created<br><br>` Windows Update Check `                                         | Scheduled Task                           | `T1053.005` |
+| 2025-11-19T19:07:46.9796512Z     | **9**      | Persistence                 | Malicious payload executed via Scheduled Task<br><br>`C:\ProgramData\WindowsCache\svchost.exe` | Scheduled Task / Execution               | `T1053.005` |
+| 2025-11-19T19:06:58.5778439Z     | **10**     | C2                          | External C2 server (`78.141.196.6`)                                                            | Application Layer Protocol (HTTPS)       | `T1071.001` |
+| 2025-11-19T19:11:04.1766386Z     | **11**     | C2                          | C2 communication over port ` 443 `                                                             | Encrypted Channel / Web Protocol         | `T1071.001` |
+| 2025-11-19T19:08:26.2804285Z     | **12**     | Credential Access           | Credential dumping tool (`mm.exe`)                                                             | OS Credential Dumping                    | `T1003`     |
+| 2025-11-19T19:08:26.2804285Z     | **13**     | Credential Access           | LSASS extraction via `sekurlsa::logonpasswords`                                                | Credential Dumping: LSASS                | `T1003.001` |
+| 2025-11-19T19:09:21.3267384Z     | **14**     | Collection                  | Stolen data archived (`export-data.zip`)                                                       | Archive Collected Data                   | `T1560`     |
+| 2025-11-19T19:09:21.3267384Z     | **15**     | Exfiltration                | Data uploaded via ` Discord ` CDN                                                              | Exfiltration to Cloud Storage            | `T1567.002` |
+| 2025-11-19T19:11:39.0934399Z     | **16**     | Anti-Forensics              | Security Log cleared                                                                           | Clear Windows Event Logs                 | `T1070.001` |
+| 2025-11-19T19:09:48.8977132Z     | **17**     | Impact / Persistence        | Backdoor account (`support`) created                                                           | Create Account (Local)                   | `T1136.001` |
+| 2025-11-19T18:49:48.7079818Z     | **18**     | Execution                   | Malicious PowerShell script (`wupdate.ps1`)                                                    | PowerShell                               | `T1059.001` |
+| 2025-11-19T19:10:42.0471389Z     | **19**     | Lateral Movement            | Lateral movement target (`10.1.0.188`)                                                         | Remote Services                          | `T1021`     |
+| 2025-11-19T19:10:42.**0471389Z** | **20**     | Lateral Movement            | `mstsc.exe` used for RDP pivot                                                                 | Remote Services: RDP                     | `T1021.001` |
 
 ----
 
