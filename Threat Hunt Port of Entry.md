@@ -1,10 +1,10 @@
 
 # 🛡️ Threat Hunt Report
 
-**Operation:** _Port of Entry_  
-**Environment:** Josh Madakor Cyber Range  - Microsoft Azure
-**Analyst:** Grisham DelRosario
-**Date:** November 22nd-23rd, 2025
+- **Operation:** _Port of Entry_  
+- **Environment:** Josh Madakor Cyber Range  - Microsoft Azure
+- **Analyst:** Grisham DelRosario
+- **Date:** November 22nd-23rd, 2025
 
 -----
 # 🧩 Executive Summary
