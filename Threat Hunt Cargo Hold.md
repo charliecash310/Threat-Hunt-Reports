@@ -1,11 +1,11 @@
 
 ## 🛡️ Threat Hunt Report
 
-**Operation:** Cargo Hold 
-**Environment:** Josh Madakor Cyber Range  - Microsoft Azure - Microsoft Defender
-**Analyst:** Grisham DelRosario
-**Date:** December 6th, 2025
-Incident: November 19th - 24th, 2025
+- **Operation:** Cargo Hold 
+- **Environment:** Josh Madakor Cyber Range  - Microsoft Azure - Microsoft Defender
+- **Analyst:** Grisham DelRosario
+- **Date:** December 6th, 2025
+- **Incident:** November 19th - 24th, 2025
 
 ----
 ## 🧩 Executive Summary
