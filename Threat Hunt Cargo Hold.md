@@ -19,7 +19,7 @@ Impact in plain terms:
 - **Integrity:** No direct tampering observed, but credentials compromise enables future modification.
 - **Availability:** Not impacted in this scenario.
 
-![[Pasted image 20251206170521.png]]
+<img width="634" height="312" alt="Pasted image 20251206170521" src="https://github.com/user-attachments/assets/2b08ed68-f34a-4de8-8adc-e0176ca2f022" />
 
 ------
 ##  🌎 Environment / Scope
@@ -57,7 +57,8 @@ Impact in plain terms:
 ----
 ## FLAG 1
 
-![[Pasted image 20251206173504.png]]
+<img width="626" height="423" alt="Pasted image 20251206173504" src="https://github.com/user-attachments/assets/a407e994-a3fd-42b7-a46c-192844b4a7ac" />
+
 
 ```
 
@@ -69,13 +70,14 @@ DeviceLogonEvents
 
 ```
 
-![[Pasted image 20251207125048.png]]
+<img width="1331" height="632" alt="Pasted image 20251207125048" src="https://github.com/user-attachments/assets/40f65444-3ccb-4107-8edf-8513aec822c7" />
+
 
 ----
 
 ## FLAG 2
 
-![[Pasted image 20251206181932.png]]
+<img width="633" height="474" alt="Pasted image 20251206181932" src="https://github.com/user-attachments/assets/ff070981-7c93-40ed-bdfd-89776b80b2c3" />
 
 ```
 //FLAG 2 // 10.1.0.188 / 10.1.0.108
@@ -86,7 +88,8 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206182237.png]]
+<img width="633" height="474" alt="Pasted image 20251206181932" src="https://github.com/user-attachments/assets/f708b75f-56fd-4767-bc7b-04dfd7e704fc" />
+
 
 ```
 // FLAG 2 / 10.1.0.108
@@ -97,27 +100,31 @@ DeviceLogonEvents
 | project Timestamp, DeviceName, ActionType, LogonType, AccountDomain, AccountName, RemoteIP
 ```
 
-![[Pasted image 20251206182748.png]]
+<img width="1309" height="1130" alt="Pasted image 20251206182748" src="https://github.com/user-attachments/assets/b407055f-716f-44a3-ae08-39e1bba80cbd" />
+
 
 ----
 
 ## FLAG 3
 
-![[Pasted image 20251206182929.png]]
+<img width="635" height="403" alt="Pasted image 20251206182929" src="https://github.com/user-attachments/assets/36e8579b-7e26-4069-9c65-cb91e95f2916" />
+
 
 ```
 Refer to KQL Query for Flag 2
 ```
 
 
-![[Pasted image 20251206183512.png]]
+<img width="1684" height="555" alt="Pasted image 20251206183512" src="https://github.com/user-attachments/assets/fd23dac7-21f6-40fb-a46c-76ac3a60105b" />
+
 
 
 ----
 
 ## FLAG 4
 
-![[Pasted image 20251206190319.png]]
+<img width="630" height="428" alt="Pasted image 20251206190319" src="https://github.com/user-attachments/assets/3c13923d-5f41-44ea-8e9f-d99118559973" />
+
 
 ```
 // FLAG 4
@@ -128,14 +135,16 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206190446.png]]
+<img width="1145" height="230" alt="Pasted image 20251206190446" src="https://github.com/user-attachments/assets/36e0b22d-45a0-497b-baa9-47e92d4ae6c6" />
+
 
 
 ----
 
 ## FLAG 5
 
-![[Pasted image 20251206192255.png]]
+<img width="633" height="480" alt="Pasted image 20251206192255" src="https://github.com/user-attachments/assets/07456861-cb16-4623-9353-9434d4d94668" />
+
 
 ```
 //FLAG 5 - Remote Share Enumeration
@@ -146,15 +155,18 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206192658.png]]
-![[Pasted image 20251206192718.png]]
+<img width="1312" height="932" alt="Pasted image 20251206192658" src="https://github.com/user-attachments/assets/8f2e948c-f751-4733-b2b7-f75184b6e1c1" />
+
+<img width="1276" height="235" alt="Pasted image 20251206192718" src="https://github.com/user-attachments/assets/85e88d9b-b7d2-4151-baef-a18183fc9ce5" />
+
 
 
 ----
 
 ## FLAG 6
 
-![[Pasted image 20251206192749.png]]
+<img width="621" height="493" alt="Pasted image 20251206192749" src="https://github.com/user-attachments/assets/d9444790-5c3b-4399-bed1-94891b6162a4" />
+
 
 ```
 //FLAG 6 - Enumerate User Privilege
@@ -165,13 +177,15 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206192927.png]]
+<img width="1116" height="307" alt="Pasted image 20251206192927" src="https://github.com/user-attachments/assets/64efe1ab-acd5-4de8-b4cc-09eb37c1d648" />
+
 
 ----
 
 ## FLAG 7
 
-![[Pasted image 20251206194533.png]]
+<img width="621" height="497" alt="Pasted image 20251206194533" src="https://github.com/user-attachments/assets/238e305e-225e-49d2-9dc6-ec067e1daa25" />
+
 
 ```
 //FLAG 7 - Discovery - Network Configuration Command
@@ -182,14 +196,16 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206194708.png]]
+<img width="1117" height="316" alt="Pasted image 20251206194708" src="https://github.com/user-attachments/assets/7b6f7928-0c72-4c02-bab5-ce9a6e560c6a" />
+
 
 
 ----
 
 ## FLAG 8
 
-![[Pasted image 20251206194736.png]]
+<img width="616" height="493" alt="Pasted image 20251206194736" src="https://github.com/user-attachments/assets/4199632f-f4c6-48da-b714-c3d929ac682c" />
+
 
 ```
 //FLAG 8 - Defense Evasion - Directory Hiding Command
@@ -200,13 +216,15 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, ProcessCommandLine
 ```
 
-![[Pasted image 20251206194840.png]]
+<img width="1274" height="266" alt="Pasted image 20251206194840" src="https://github.com/user-attachments/assets/d8ca825c-b58c-4ade-b08b-cf77983619ef" />
+
 
 ----
 
 ## FLAG 9
 
-![[Pasted image 20251206194916.png]]
+<img width="579" height="366" alt="Pasted image 20251206194916" src="https://github.com/user-attachments/assets/cdc08ea4-6f5f-4855-a0ae-71808baa8d4e" />
+
 
 ```
 Refer to Flag 8
@@ -216,15 +234,18 @@ Refer to Flag 8
 
 ## FLAG 10
 
-![[Pasted image 20251206195114.png]]
+<img width="613" height="461" alt="Pasted image 20251206195114" src="https://github.com/user-attachments/assets/2a86fc32-79d3-4df7-9833-025362d3f962" />
 
-![[Pasted image 20251206195100.png]]
+
+<img width="1541" height="347" alt="Pasted image 20251206195100" src="https://github.com/user-attachments/assets/326f242a-5dad-47cf-ab82-c0a5a3680842" />
+
 
 ----
 
 ## FLAG 11
 
-![[Pasted image 20251206211055.png]]
+<img width="602" height="489" alt="Pasted image 20251206211055" src="https://github.com/user-attachments/assets/5da95ba5-e8c4-443e-a1d5-cc9029ffe727" />
+
 
 
 ```
@@ -238,22 +259,26 @@ DeviceFileEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, InitiatingProcessCommandLine
 ```
 
-![[Pasted image 20251206211108.png]]
+<img width="1709" height="286" alt="Pasted image 20251206211108" src="https://github.com/user-attachments/assets/d97e4eae-64e8-4cfc-9107-aa8cd95655e6" />
+
 
 
 -----
 
 ## FLAG 12
 
-![[Pasted image 20251206211333.png]]
+<img width="633" height="417" alt="Pasted image 20251206211333" src="https://github.com/user-attachments/assets/765f011a-42a6-446f-9966-c6f6c3c34274" />
 
-![[Pasted image 20251206211108.png]]
+
+<img width="1709" height="286" alt="Pasted image 20251206211108" src="https://github.com/user-attachments/assets/657aa7ea-1083-4eea-a862-bda06d818d2a" />
+
 
 ----
 
 ## FLAG 13
 
-![[Pasted image 20251206212014.png]]
+<img width="629" height="409" alt="Pasted image 20251206212014" src="https://github.com/user-attachments/assets/505c07ac-38df-4651-b316-712c2af171c8" />
+
 
 ```
 //FLAG 13 - Collection - Compression Command
@@ -265,40 +290,46 @@ DeviceFileEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, InitiatingProcessCommandLine
 ```
 
-![[Pasted image 20251206212102.png]]
+<img width="2106" height="611" alt="Pasted image 20251206212102" src="https://github.com/user-attachments/assets/4146e8b4-b3ed-4d89-88d6-e54b00cc9037" />
+
 
 
 -----
 
 ## FLAG 14
 
-![[Pasted image 20251206212244.png]]
+<img width="608" height="451" alt="Pasted image 20251206212244" src="https://github.com/user-attachments/assets/637e946b-7671-4d03-84e2-f0112d1c1653" />
+
 
 ```
 Refer to Flag 13
 ```
 
 
-![[Pasted image 20251206212214.png]]
+<img width="1564" height="242" alt="Pasted image 20251206212214" src="https://github.com/user-attachments/assets/97199182-c17e-4be2-9fad-f9e4f5f50057" />
+
 
 
 -----
 
 ## FLAG 15
 
-![[Pasted image 20251206212743.png]]
+<img width="614" height="401" alt="Pasted image 20251206212743" src="https://github.com/user-attachments/assets/ddaef169-db6f-44a7-a580-f0106f31f291" />
+
 
 ```
 Refer to Flag 13
 ```
 
-![[Pasted image 20251206212854.png]]
+<img width="1854" height="231" alt="Pasted image 20251206212854" src="https://github.com/user-attachments/assets/df37eb5d-8b5d-4597-acdf-5450834b1939" />
+
 
 ----
 
 ## FLAG 16
 
-![[Pasted image 20251206220949.png]]
+<img width="635" height="474" alt="Pasted image 20251206220949" src="https://github.com/user-attachments/assets/5423d0fb-791d-4282-b3bd-9e0bca3136b4" />
+
 
 ```
 //FLAG 16: Exfiltration - Upload Command
@@ -310,26 +341,31 @@ DeviceNetworkEvents
 | order by Timestamp asc
 ```
 
-![[Pasted image 20251206221028.png]]
-![[Pasted image 20251206221050.png]]
+<img width="1759" height="552" alt="Pasted image 20251206221028" src="https://github.com/user-attachments/assets/e9ba802e-4eaa-4a45-a971-6705a0a6909a" />
+
+<img width="1695" height="263" alt="Pasted image 20251206221050" src="https://github.com/user-attachments/assets/8229672c-fcc4-41f3-bb35-9801f5a51194" />
+
 
 ----
 
 ## FLAG 17
 
-![[Pasted image 20251206223645.png]]
+<img width="626" height="386" alt="Pasted image 20251206223645" src="https://github.com/user-attachments/assets/484bb9d4-6f49-4664-a1cb-e35392abfc2a" />
+
 
 ```
 Refer to Flag 16
 ```
 
-![[Pasted image 20251206221050.png]]
+<img width="1695" height="263" alt="Pasted image 20251206221050" src="https://github.com/user-attachments/assets/f7df87ed-82db-4e17-998e-263c21157007" />
+
 
 ----
 
 ## FLAG 18
 
-![[Pasted image 20251206223757.png]]
+<img width="631" height="387" alt="Pasted image 20251206223757" src="https://github.com/user-attachments/assets/24203306-195c-4933-ba4f-d0408813e424" />
+
 
 ```
 // Flag 18
@@ -343,14 +379,16 @@ DeviceRegistryEvents
 | order by Timestamp asc
 ```
 
-![[Pasted image 20251206223745.png]]
+<img width="1902" height="371" alt="Pasted image 20251206223745" src="https://github.com/user-attachments/assets/412f2200-112a-4470-9ae1-ae5f701a65bb" />
+
 
 
 -----
 
 ## FLAG 19
 
-![[Pasted image 20251206224121.png]]
+<img width="630" height="480" alt="Pasted image 20251206224121" src="https://github.com/user-attachments/assets/fa087132-692e-4cf5-83b1-0f3ab0e61f2f" />
+
 
 ```
 Refer to Flag 18
@@ -362,7 +400,8 @@ Refer to Flag 18
 
 ## FLAG 20
 
-![[Pasted image 20251206224610.png]]
+<img width="634" height="434" alt="Pasted image 20251206224610" src="https://github.com/user-attachments/assets/b6553fa7-9315-4da6-9ed1-3d88b2cc647c" />
+
 
 ```
 //Flag 20
@@ -374,7 +413,8 @@ DeviceFileEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath
 ```
 
-![[Pasted image 20251206224640.png]]
+<img width="1514" height="244" alt="Pasted image 20251206224640" src="https://github.com/user-attachments/assets/0fd8fb71-4666-4fe4-9817-bd0664b765f9" />
+
 
 ----
 # 🗂️ **Full MITRE ATT&CK Mapping Table (Flags 1–20)**
