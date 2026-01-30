@@ -1,5 +1,30 @@
-![[Pasted image 20260117202240.png]]
+## Threat Hunt Scenario - Corp Health - Traceback
+-----
+# Incident Response Report
 
+**Incident ID:** IR-CH-OPS-WKS02-2025-11  
+**Host:** CH-OPS-WKS02  
+**Operating System:** Windows  
+**Detection Source:** Microsoft Defender for Endpoint (Advanced Hunting)  
+**Timeframe:** 2025-11-21 → 2025-12-02  
+**Severity:** **High (Confirmed Intrusion)**
+
+----
+
+## Executive Summary
+
+On **CH-OPS-WKS02**, an external adversary successfully authenticated using valid credentials and established persistent access through remote interactive sessions. The attacker leveraged **PowerShell-based execution**, **defense evasion**, **access token manipulation**, and **external tooling retrieval via dynamic tunneling infrastructure (ngrok)** to deploy a reverse shell payload. Following execution, the attacker attempted outbound command-and-control (C2) communications over a **non-standard TCP port**, established **Startup folder persistence**, and pivoted between multiple accounts. Telemetry confirms the activity originated from **Vietnam (Hanoi)** and included **internal pivoting through an Azure VNet IP**. The incident represents a **full kill-chain compromise** from initial access through persistence and attempted C2.
+
+------
+
+## Timeline of Events (Flags 1-31)
+
+| Phase                | Flags | Summary                                       |
+| -------------------- | ----- | --------------------------------------------- |
+| Initial Access       | 1–5   | Remote authentication using valid credentials |
+| Execution            | 6–8   | PowerShell and script execution               |
+| Defense Evasion      | 9–12  | Defender exclusion + obfuscation              |
+| Privilege Escalation | 13–15 | Token manipulation                            
 ------
 ## FLAG 0 - Identify the device
 
