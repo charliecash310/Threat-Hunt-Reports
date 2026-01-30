@@ -14,10 +14,10 @@
 ----
 ## Report By
 
-`**Date:** October 1st - 15th, 2025`  
+`**Date:** January 17th - 24th, 2026`  
 `**Analyst:** Grisham DelRosario`  
 `**Environment:** Microsoft - Log Analytics Workspace (LAW - Cyber Range)`  
-`**Attack Type:** Fake Remote Session/Malicious Help Desk`
+`**Attack Type:** Credential-based remote access intrusion with post-exploitation staging and persistence`
 
 ----
 ## Executive Summary
