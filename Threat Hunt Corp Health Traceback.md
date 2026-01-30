@@ -37,7 +37,19 @@ On **CH-OPS-WKS02**, an external adversary successfully authenticated using vali
 
 <img width="653" height="471" alt="image" src="https://github.com/user-attachments/assets/f6bb48af-6ac4-411e-b7c3-4aa59e003854" />
 
-
+```
+//FLAG 11
+DeviceEvents
+| where TimeGenerated  between (datetime(2025-11-05T01:00:00Z) .. datetime(2025-12-05T01:10:00Z))
+| project
+    TimeGenerated,
+    DeviceName,
+    ActionType,
+    AdditionalFields,
+    InitiatingProcessFileName,
+    InitiatingProcessCommandLine
+| order by TimeGenerated asc
+```
 ------
 ## FLAG 1 - Unique Maintenance File
 
