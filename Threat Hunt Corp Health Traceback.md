@@ -24,7 +24,14 @@ On **CH-OPS-WKS02**, an external adversary successfully authenticated using vali
 | Initial Access       | 1–5   | Remote authentication using valid credentials |
 | Execution            | 6–8   | PowerShell and script execution               |
 | Defense Evasion      | 9–12  | Defender exclusion + obfuscation              |
-| Privilege Escalation | 13–15 | Token manipulation                            
+| Privilege Escalation | 13–15 | Token manipulation                            |
+| Ingress Tooling      | 16–17 | External payload retrieval                    |
+| Execution            | 18    | Reverse shell execution                       |
+| Command & Control    | 19    | Outbound C2 attempts                          |
+| Persistence          | 20    | Startup folder placement                      |
+| Session Attribution  | 21–23 | Remote device, IP, pivot host                 |
+| Initial Logon        | 24–26 | First successful suspicious logon             |
+| Recon & Expansion    | 28–31 | Post-logon actions and account pivot          |
 ------
 ## FLAG 0 - Identify the device
 
