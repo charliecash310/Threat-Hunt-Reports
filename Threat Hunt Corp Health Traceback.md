@@ -10,8 +10,16 @@
 **Timeframe:** 2025-11-21 → 2025-12-02  
 **Severity:** **High (Confirmed Intrusion)**
 
-----
 
+----
+## Report By
+
+`**Date:** October 1st - 15th, 2025`  
+`**Analyst:** Grisham DelRosario`  
+`**Environment:** Microsoft - Log Analytics Workspace (LAW - Cyber Range)`  
+`**Attack Type:** Fake Remote Session/Malicious Help Desk`
+
+----
 ## Executive Summary
 
 On **CH-OPS-WKS02**, an external adversary successfully authenticated using valid credentials and established persistent access through remote interactive sessions. The attacker leveraged **PowerShell-based execution**, **defense evasion**, **access token manipulation**, and **external tooling retrieval via dynamic tunneling infrastructure (ngrok)** to deploy a reverse shell payload. Following execution, the attacker attempted outbound command-and-control (C2) communications over a **non-standard TCP port**, established **Startup folder persistence**, and pivoted between multiple accounts. Telemetry confirms the activity originated from **Vietnam (Hanoi)** and included **internal pivoting through an Azure VNet IP**. The incident represents a **full kill-chain compromise** from initial access through persistence and attempted C2.
