@@ -100,11 +100,6 @@ DeviceProcessEvents
 | where FileName == "powershell.exe" 
 | project TimeGenerated, AccountName, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine
 ```
-DeviceProcessEvents 
-| where AccountName contains "5y51-d3p7" 
-| where FileName == "powershell.exe" 
-| project TimeGenerated, AccountName, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine`
-
 **Finding:**
 
 `powershell.exe -ExecutionPolicy Bypass -File C:\Users\...\PayrollSupport.ps1`
@@ -121,9 +116,11 @@ What was the first reconnaissance command attempted?
 
 **KQL Query Used:**
 
-`DeviceProcessEvents 
+```
+DeviceProcessEvents 
 | where AccountName contains "5y51-d3p7" 
 | project TimeGenerated, AccountName, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine`
+```
 
 **Finding:**
 
@@ -141,9 +138,11 @@ Which sensitive file was likely targeted?
 
 **KQL Query Used:**
 
-`DeviceFileEvents 
+```
+DeviceFileEvents 
 | where DeviceName == "sys1-dept" 
 | where FileName contains "bonus"`
+```
 
 **Finding:**
 
