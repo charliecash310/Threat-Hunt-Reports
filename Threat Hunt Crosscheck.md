@@ -141,7 +141,7 @@ Which sensitive file was likely targeted?
 ```
 DeviceFileEvents 
 | where DeviceName == "sys1-dept" 
-| where FileName contains "bonus"`
+| where FileName contains "bonus"
 ```
 
 **Finding:**
