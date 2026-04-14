@@ -6,3 +6,5 @@
 - [Threat Hunt Event: Dead in the Water - Part 4](https://github.com/charliecash310/Threat-Hunt-Reports/blob/main/Threat%20Hunt%20Dead%20in%20the%20Water.md)
 - [Threat Hunt Event: Corp Health - Traceback](https://github.com/charliecash310/Threat-Hunt-Reports/blob/main/Threat%20Hunt%20Corp%20Health%20Traceback.md)
 - [Threat Hunt Event: Crosscheck](https://github.com/charliecash310/Threat-Hunt-Reports/blob/main/Threat%20Hunt%20Crosscheck.md)
+- [Threat Hunt Event: The Broker](https://github.com/charliecash310/Threat-Hunt-Reports/blob/main/Threat%20Hunt%20The%20Broker.md)
+- [Threat Hunt Event: Ember Forge]()
